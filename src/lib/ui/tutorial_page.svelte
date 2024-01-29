@@ -6,7 +6,7 @@
 </script>
 
 
-<div class="page">
+<div>
     <slot/>
 
     <NavigationButton href_url={previous_url ? previous_url : ''}
@@ -17,10 +17,4 @@
     />
 </div>
 
-
-<style>
-    .page {
-        height: 120%;
-    }
-</style>
 

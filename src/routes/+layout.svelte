@@ -33,12 +33,19 @@
         width: 100%;
         height: 100%;
         margin: 2px auto;
+        padding-bottom: 2px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
         border-style: ridge;
         border-color: #614A39;
     }
 
     footer {
+        padding-top: 10px;
         text-align: center;
         color: #F2E1CA;
     }

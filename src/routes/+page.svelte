@@ -13,8 +13,5 @@
 
 
 <style>
-    .box {
-        align-items: center;
-        text-align: center;
-    }
+
 </style>
