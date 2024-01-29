@@ -6,15 +6,20 @@
 </script>
 
 
-<div>
-    <slot/>
-
-    <NavigationButton href_url={previous_url ? previous_url : ''}
+<slot/>
+<div class="buttons">
+   <NavigationButton href_url={previous_url ?? ''}
         text="Previous" disabled={previous_url === null}
     />
-    <NavigationButton href_url={next_url ? next_url : ''}
+    <NavigationButton href_url={next_url ?? ''}
         text="Next" disabled={next_url === null}
     />
 </div>
 
 
+<style>
+    .buttons {
+        display: flex;
+        gap: 2pt;
+    }
+</style>
