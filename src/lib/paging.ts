@@ -18,7 +18,7 @@ const PAGES: Page[] = [
     { id: "p2-s1", url: "part-2_basics/sect-2_what-is-comline", name: "What is Comline?" },
 ]
 
-export const baseUrl = `/${dev ? '' : base}`
+export const baseUrl = dev ? '' : base
 
 export function pageUrl(id: string): string {
     let found = PAGES.find(page => page.id === id)
