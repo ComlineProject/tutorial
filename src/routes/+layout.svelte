@@ -5,7 +5,7 @@
 
 
 <header>
-    <a class="titleLink" href="{baseUrl}">
+    <a class="titleLink" href={baseUrl}>
         <h2 class="title">Comline Tutorial</h2>
     </a>
 </header>
