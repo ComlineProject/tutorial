@@ -18,6 +18,8 @@ const PAGES: Page[] = [
     { id: "p2-s1", url: "part-2_basics/sect-2_what-is-comline", name: "What is Comline?" },
 ]
 
+export const baseUrl = `/${dev ? '' : base}`
+
 export function pageUrl(id: string): string {
     let found = PAGES.find(page => page.id === id)
 
@@ -25,10 +27,7 @@ export function pageUrl(id: string): string {
         throw error(400, `Couldn't find tutorial page by ID '${id}', go back or start from beginning`)
     }
 
-    const base_url = dev ? '' : base
-    const url = `${base_url}/${found.url}`
-    
-    console.log(url)
+    const url = `${baseUrl}/${found.url}`
 
     return url
 }

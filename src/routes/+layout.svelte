@@ -1,10 +1,11 @@
 <script>
     import "../styles/global.css"
+    import { baseUrl } from "$lib/paging";
 </script>
 
 
 <header>
-    <a class="titleLink" href="/">
+    <a class="titleLink" href={baseUrl}>
         <h2 class="title">Comline Tutorial</h2>
     </a>
 </header>
