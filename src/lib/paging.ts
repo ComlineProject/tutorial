@@ -14,6 +14,7 @@ export const PAGES: Page[] = [
     { id: "p1", url: "part-1_introduction", name: "Introduction" },
     { id: "p1-s1", url: "part-1_introduction/sect-1_what-is-comline", name: "What is Comline?" },
     { id: "p1-s2", url: "part-1_introduction/sect-2_how-is-comline", name: "How is Comline?" },
+    { id: "p1-s3", url: "part-1_introduction/sect-3_try-it", name: "Try it" },
 ]
 
 export const baseUrl = dev ? '/' : base + '/'
