@@ -36,7 +36,7 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-static": "^3.0.10",
-    "comline-simulator": "github:ComlineProject/simulator#feat/consume-as-git-dep"
+    "comline-simulator": "github:ComlineProject/simulator#6e197b18e61ead0fbcb36321ab21c5ad2093123d"
   },
   "pnpm": {
     "overrides": {

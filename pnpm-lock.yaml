@@ -17,8 +17,8 @@ importers:
         specifier: ^3.0.10
         version: 3.0.10(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.57.0(@typescript-eslint/types@8.69.0))(vite@7.3.6(yaml@2.9.0)))(svelte@5.57.0(@typescript-eslint/types@8.69.0))(typescript@5.9.3)(vite@7.3.6(yaml@2.9.0)))
       comline-simulator:
-        specifier: github:ComlineProject/simulator#feat/consume-as-git-dep
-        version: https://codeload.github.com/ComlineProject/simulator/tar.gz/f7043cb02711228f04b316249c7fc47a4422fc46
+        specifier: github:ComlineProject/simulator#6e197b18e61ead0fbcb36321ab21c5ad2093123d
+        version: https://codeload.github.com/ComlineProject/simulator/tar.gz/6e197b18e61ead0fbcb36321ab21c5ad2093123d
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -661,8 +661,8 @@ packages:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
 
-  comline-simulator@https://codeload.github.com/ComlineProject/simulator/tar.gz/f7043cb02711228f04b316249c7fc47a4422fc46:
-    resolution: {tarball: https://codeload.github.com/ComlineProject/simulator/tar.gz/f7043cb02711228f04b316249c7fc47a4422fc46}
+  comline-simulator@https://codeload.github.com/ComlineProject/simulator/tar.gz/6e197b18e61ead0fbcb36321ab21c5ad2093123d:
+    resolution: {tarball: https://codeload.github.com/ComlineProject/simulator/tar.gz/6e197b18e61ead0fbcb36321ab21c5ad2093123d}
     version: 0.0.0
 
   cookie@0.7.2:
@@ -1764,7 +1764,7 @@ snapshots:
 
   clsx@2.1.1: {}
 
-  comline-simulator@https://codeload.github.com/ComlineProject/simulator/tar.gz/f7043cb02711228f04b316249c7fc47a4422fc46: {}
+  comline-simulator@https://codeload.github.com/ComlineProject/simulator/tar.gz/6e197b18e61ead0fbcb36321ab21c5ad2093123d: {}
 
   cookie@0.7.2: {}
 
