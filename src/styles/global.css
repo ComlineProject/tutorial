@@ -26,3 +26,13 @@ a,p,text,label {
 .box {
     align-items: center;
 }
+
+.commonBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 1pt;
+    margin-bottom: 1pt;
+    
+    border-style: ridge;
+    border-color: #614A39;
+}

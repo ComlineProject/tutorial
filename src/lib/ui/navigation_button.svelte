@@ -1,11 +1,11 @@
 <script lang="ts">
-    export let href_url: string;
+    export let href_url: string | null;
     export let text: string;
     export let disabled: boolean = false;
 </script>
 
 
-<a class="{disabled ? "btn-disabled" : "btn"}" href={href_url}>
+<a class="{disabled ? "btn-disabled" : "btn"}" href={href_url ?? '#'}>
     {text}
 </a>
 

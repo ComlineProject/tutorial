@@ -6,7 +6,7 @@
 
 <header>
     <a class="titleLink" href={baseUrl}>
-        <h2 class="title">Comline Tutorial</h2>
+        <h1 class="title">Comline Tutorial</h1>
     </a>
 </header>
 
@@ -31,13 +31,11 @@
     }
 
     main {
-        width: 100%;
-        height: 100%;
-        margin: 2px auto;
-        padding-bottom: 2px;
-
         display: flex;
         flex-direction: column;
+        margin: 2px auto;
+        padding-bottom: 1%;
+        
         align-items: center;
         text-align: center;
 
