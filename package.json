@@ -6,7 +6,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "npm run test:integration && npm run test:unit",
+    "test": "yarn test:integration && yarn test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check . && eslint .",
@@ -36,13 +36,12 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-static": "^3.0.10",
-    "comline-simulator": "github:ComlineProject/simulator#6e197b18e61ead0fbcb36321ab21c5ad2093123d"
+    "comline-simulator": "git+https://github.com/ComlineProject/simulator.git#eff27ce9b077ec411c299743b328a24089387215"
   },
-  "pnpm": {
-    "overrides": {
-      "cookie": "^0.7.2",
-      "flatted": "^3.4.2",
-      "yaml": "^2.8.1"
-    }
-  }
+  "resolutions": {
+    "cookie": "^0.7.2",
+    "flatted": "^3.4.2",
+    "yaml": "^2.8.1"
+  },
+  "packageManager": "yarn@4.18.0"
 }
