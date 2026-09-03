@@ -5,7 +5,7 @@
 
 
 <nav class="commonBox">
-    {#each PAGES as page}
+    {#each PAGES as page (page.id)}
         <a href={pageUrl(page.id) ?? '#'}>{page.name}</a>
     {/each}
 </nav>
