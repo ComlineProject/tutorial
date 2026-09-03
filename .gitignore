@@ -9,6 +9,15 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Yarn Berry — keep the pinned release, drop the rest
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 
 # JetBrains IDEA settings
 .idea/
