@@ -1,0 +1,21 @@
+// The "Try it" lesson schema: a Chat client and server on one connection.
+//
+// chat.lesson.json (committed beside this) is `{ shape, session }` — the
+// compiled shape from the playground editor wasm's `describe_project`, plus a
+// `#s=` link that pre-wires the topology. Regenerate it if this schema changes;
+// the tutorial itself has no editor wasm, so it ships the baked JSON.
+
+struct Message {
+    body: string
+    seq: u64
+}
+
+error Rejected {
+    message = "rejected"
+    reason: string
+}
+
+protocol Chat {
+    function send(text: string) -> Message ! Rejected;
+    function note(text: string);
+}

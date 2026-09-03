@@ -7,6 +7,8 @@ on:
 jobs:
   build_site:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,6 +23,19 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
+
+      # `comline-simulator` is a git dependency that compiles to WASM in its
+      # `prepare` (Rust → wasm-bindgen). The runner has cargo; this caches the
+      # one-time `wasm-bindgen-cli` build across runs.
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: ${{ runner.os }}-cargo-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-cargo-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

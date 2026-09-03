@@ -1,0 +1,99 @@
+{
+  "shape": {
+    "schemas": [
+      {
+        "namespace": "chat",
+        "ir_hash": "0x743f14f17eb07c60",
+        "protocols": [
+          {
+            "name": "Chat",
+            "framing": "datagram",
+            "functions": [
+              {
+                "name": "send",
+                "index": 0,
+                "oneway": false,
+                "args": [
+                  {
+                    "name": "text",
+                    "ty": {
+                      "kind": "prim",
+                      "name": "string"
+                    }
+                  }
+                ],
+                "returns": {
+                  "kind": "ref",
+                  "name": "Message"
+                },
+                "throws": [
+                  {
+                    "ordinal": 0,
+                    "name": "Rejected"
+                  }
+                ]
+              },
+              {
+                "name": "note",
+                "index": 1,
+                "oneway": true,
+                "args": [
+                  {
+                    "name": "text",
+                    "ty": {
+                      "kind": "prim",
+                      "name": "string"
+                    }
+                  }
+                ],
+                "throws": []
+              }
+            ]
+          }
+        ],
+        "errors": [
+          {
+            "ordinal": 0,
+            "name": "Rejected",
+            "message": "rejected",
+            "fields": [
+              {
+                "name": "reason",
+                "ty": {
+                  "kind": "prim",
+                  "name": "string"
+                },
+                "optional": false
+              }
+            ]
+          }
+        ],
+        "types": [
+          {
+            "kind": "struct",
+            "name": "Message",
+            "fields": [
+              {
+                "name": "body",
+                "ty": {
+                  "kind": "prim",
+                  "name": "string"
+                },
+                "optional": false
+              },
+              {
+                "name": "seq",
+                "ty": {
+                  "kind": "prim",
+                  "name": "u64"
+                },
+                "optional": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "session": "eyJ2IjoxLCJzZXNzaW9uIjp7Im5vZGVzIjpbeyJpZCI6Im4xIiwibGFiZWwiOiJNYWNoaW5lIDEiLCJ4Ijo0OC4wLCJ5Ijo3Mi4wLCJpbnN0YW5jZUlkcyI6WyJpMSJdfSx7ImlkIjoibjIiLCJsYWJlbCI6Ik1hY2hpbmUgMiIsIngiOjMzNi4wLCJ5Ijo3Mi4wLCJpbnN0YW5jZUlkcyI6WyJpMiJdfV0sImluc3RhbmNlcyI6W3siaWQiOiJpMSIsIm5hbWUiOiJjaGF0LTEiLCJyb2xlIjoic2VydmVyIiwic2NoZW1hTnMiOiJjaGF0IiwicHJvdG9jb2wiOiJDaGF0IiwiYmVoYXZpb3JzIjp7Im5vdGUiOnsia2luZCI6ImRyb3AiLCJjb25maWciOnt9fSwic2VuZCI6eyJraW5kIjoicmVwbHkiLCJjb25maWciOnsidmFsdWUiOnsiYm9keSI6IiIsInNlcSI6MH19fX0sImlySGFzaCI6IjB4NzQzZjE0ZjE3ZWIwN2M2MCIsIm5vZGVJZCI6Im4xIn0seyJpZCI6ImkyIiwibmFtZSI6ImNoYXQtMiIsInJvbGUiOiJjbGllbnQiLCJzY2hlbWFOcyI6ImNoYXQiLCJwcm90b2NvbCI6IkNoYXQiLCJiZWhhdmlvcnMiOnt9LCJpckhhc2giOiIweDc0M2YxNGYxN2ViMDdjNjAiLCJub2RlSWQiOiJuMiJ9XSwiY29ubmVjdGlvbnMiOlt7ImlkIjoiYzEiLCJjbGllbnRJZCI6ImkyIiwic2VydmVySWQiOiJpMSIsImZhdWx0cyI6eyJkcm9wUHJvYiI6MC4wLCJkZWxheU1pbiI6MC4wLCJkZWxheU1heCI6MC4wLCJyZW9yZGVyV2luZG93IjowLCJjb3JydXB0UHJvYiI6MC4wLCJwYXJ0aXRpb24iOmZhbHNlLCJhcHBseVRvIjoiYm90aCJ9LCJmcmFtaW5nIjoiYXV0byIsIndpcmVGb3JtYXQiOiJqc29uIn1dLCJsYXRlbmN5TXMiOjAuMCwiY2FsbFRpbWVvdXRNcyI6MzAwMC4wLCJzZWVkIjoxLCJjbG9ja01vZGUiOiJyZWFsIn19"
+}
