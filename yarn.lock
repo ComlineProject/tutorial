@@ -1038,10 +1038,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"comline-simulator@git+https://github.com/ComlineProject/simulator.git#eff27ce9b077ec411c299743b328a24089387215":
+"comline-simulator@git+https://github.com/ComlineProject/simulator.git#279a56c1ddabb8f1ecd33dd5f3686c52dd88aeee":
   version: 0.0.0
-  resolution: "comline-simulator@https://github.com/ComlineProject/simulator.git#commit=eff27ce9b077ec411c299743b328a24089387215"
-  checksum: 10c0/9c915aff535698860b568c108e61f474576fa87f0e7e69b6118a17da44f51524b634dcd69748acfb6e6c0c2b7f443ec4b6f76df403b867e85cf011437a229b11
+  resolution: "comline-simulator@https://github.com/ComlineProject/simulator.git#commit=279a56c1ddabb8f1ecd33dd5f3686c52dd88aeee"
+  checksum: 10c0/9fb1f4aff13b1366a06385c44347ca3d0717b84c5c3879d570de08f97990bed7c1814c89a6746766f104c684b2c334e7b347e62c20a72673aa6b4ce4518d8165
   languageName: node
   linkType: hard
 
@@ -2376,7 +2376,7 @@ __metadata:
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/kit": "npm:^2.70.3"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.4"
-    comline-simulator: "git+https://github.com/ComlineProject/simulator.git#eff27ce9b077ec411c299743b328a24089387215"
+    comline-simulator: "git+https://github.com/ComlineProject/simulator.git#279a56c1ddabb8f1ecd33dd5f3686c52dd88aeee"
     eslint: "npm:^10.9.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-svelte: "npm:^3.23.0"
