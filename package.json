@@ -31,7 +31,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.69.0",
     "vite": "^7.3.6",
-    "vitest": "^3.2.7"
+    "vitest": "^4.1.12"
   },
   "type": "module",
   "dependencies": {
@@ -41,6 +41,7 @@
   "resolutions": {
     "cookie": "^0.7.2",
     "flatted": "^3.4.2",
+    "vite@^6.0.0 || ^7.0.0 || ^8.0.0": "^7.3.7",
     "yaml": "^2.8.1"
   },
   "packageManager": "yarn@4.18.0"
