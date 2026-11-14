@@ -2,25 +2,106 @@
 	box-sizing: border-box;
 }
 
+/* The palette. Dark is the default; `<html data-theme="light">` (the header's
+   toggle) swaps in the light one: warm paper rather than white. */
+:root {
+    --page-bg: #12110F;
+    --panel-bg: #1a1714;
+    --bar-bg: #322922;
+    --fg: #F2E1CA;
+    --muted: #a8927a;
+    --accent: #DBB594;
+    --border: #614A39;
+
+    --btn-bg: #322922;
+    --btn-fg: #DBB594;
+    --btn-border: #4D3C2F;
+    --btn-hover: #3E3128;
+    --btn-active: #28211D;
+    --current-bg: #322922;
+
+    --ok: #9ece6a;
+    --err: #f7768e;
+    --warn: #e0af68;
+
+    /* Schema and generated-code colours (the editor's, and inline <Code>). */
+    --tok-kw: #bb9af7;
+    --tok-type: #7dcfff;
+    --tok-str: #9ece6a;
+    --tok-comment: #565f89;
+    --tok-num: #ff9e64;
+    --tok-ann: #e0af68;
+    --tok-var: #73daca;
+    --tok-fn: #7aa2f7;
+    --tok-op: #9aa5ce;
+    --tok-self: #f7768e;
+    --active-line: #ffffff08;
+    --selection: #3d59a1;
+
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    --page-bg: #e9dfcf;
+    --panel-bg: #f4ecdf;
+    --bar-bg: #e0d2bc;
+    --fg: #3b2f25;
+    --muted: #7a6654;
+    --accent: #8a5a2b;
+    --border: #b39a7f;
+
+    --btn-bg: #e0d2bc;
+    --btn-fg: #5a3d22;
+    --btn-border: #b39a7f;
+    --btn-hover: #d6c4a8;
+    --btn-active: #cbb696;
+    --current-bg: #ddcbb0;
+
+    --ok: #3f7a2a;
+    --err: #b0303f;
+    --warn: #9a6b00;
+
+    --tok-kw: #7c3fbf;
+    --tok-type: #1f6a86;
+    --tok-str: #4b7d1e;
+    --tok-comment: #8a7a68;
+    --tok-num: #b4561b;
+    --tok-ann: #9a6400;
+    --tok-var: #2a7d72;
+    --tok-fn: #3558a8;
+    --tok-op: #6b5a4a;
+    --tok-self: #b0303f;
+    --active-line: #0000000a;
+    --selection: #c9d6ee;
+
+    color-scheme: light;
+}
+
+/* Header, main and footer fill the window exactly, and main takes the height
+   left over. The page never scrolls; what's inside main does. */
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
     margin: 0;
-    background: #12110F;
+    background: var(--page-bg);
 	//font-family: 'Manrope Variable', sans-serif;
 }
 
 h1,h2,h3,h4,li {
     font-family: 'VT323', monospace;
     font-weight: normal;
-    color: #F2E1CA;
+    color: var(--fg);
 }
 
 
 a,p,text,label {
     font-family: 'VT323', monospace;
     padding-left: 10pt;
-    color: #F2E1CA;
+    color: var(--fg);
 }
 
 .box {
@@ -34,5 +115,5 @@ a,p,text,label {
     margin-bottom: 1pt;
     
     border-style: ridge;
-    border-color: #614A39;
+    border-color: var(--border);
 }

@@ -35,8 +35,13 @@
   },
   "type": "module",
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/lang-rust": "^6.0.2",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/view": "^6.34.0",
     "@sveltejs/adapter-static": "^3.0.10",
-    "comline-web-kit": "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=fe53d2edcd25cf8bcd77d9f52a3c2ec09d453136"
+    "comline-web-kit": "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=f6077cc1a176f1cedd70225e804774e0ca4d00bc"
   },
   "resolutions": {
     "cookie": "^0.7.2",

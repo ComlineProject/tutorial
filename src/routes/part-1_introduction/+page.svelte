@@ -5,6 +5,5 @@
 
 
 <TutorialPage previous_url={baseUrl} next_url={pageUrl("p1-s1")}>
-    <p>Comline is...</p>
+	<p>Comline is an RPC/IPC schema library, in a Schema you can define data and protocol.</p>
 </TutorialPage>
-

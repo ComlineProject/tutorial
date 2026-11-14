@@ -50,14 +50,17 @@
 </div>
 
 <style>
-	/* The tutorial's palette, for the view's --cl-* properties. */
+	/* The tutorial's palette (global.css), for the view's --cl-* properties. */
 	.lesson-sim {
-		--cl-bg: #1a1714;
-		--cl-bg-2: #322922;
-		--cl-fg: #f2e1ca;
-		--cl-muted: #a8927a;
-		--cl-accent: #dbb594;
-		--cl-border: #614a39;
+		--cl-bg: var(--panel-bg);
+		--cl-bg-2: var(--bar-bg);
+		--cl-fg: var(--fg);
+		--cl-muted: var(--muted);
+		--cl-accent: var(--accent);
+		--cl-border: var(--border);
+		--cl-ok: var(--ok);
+		--cl-err: var(--err);
+		--cl-warn: var(--warn);
 
 		width: min(100%, 40rem);
 		margin: 1rem auto;
@@ -67,6 +70,6 @@
 		opacity: 0.6;
 	}
 	.err {
-		color: #f7768e;
+		color: var(--err);
 	}
 </style>
