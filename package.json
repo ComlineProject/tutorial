@@ -36,7 +36,7 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-static": "^3.0.10",
-    "comline-simulator": "git+https://github.com/ComlineProject/simulator.git#1eab1f84f1ae7760135ca4a7a519c78091001a44"
+    "comline-web-kit": "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=f5df44539f2a5c25e7dfe72bbf9efa6ef4d1df59"
   },
   "resolutions": {
     "cookie": "^0.7.2",

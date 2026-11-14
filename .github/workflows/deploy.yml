@@ -45,9 +45,10 @@ jobs:
       - name: Yarn
         run: corepack enable
 
-      # `comline-simulator` is a git dependency that compiles to WASM in its
-      # `prepack` (Rust to wasm-bindgen). The image has cargo, wasm-bindgen and
-      # wasm-opt; this caches the registry and git checkouts across runs.
+      # `comline-web-kit` (the playground's simulate view) is a git dependency,
+      # and so is its engine, `comline-simulator`, which compiles to WASM in
+      # its `prepack` (Rust to wasm-bindgen). The image has cargo, wasm-bindgen
+      # and wasm-opt; this caches the registry and git checkouts across runs.
       - name: Cache cargo
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -57,8 +58,8 @@ jobs:
           key: ${{ runner.os }}-${{ runner.arch }}-cargo-${{ hashFiles('yarn.lock') }}
           restore-keys: ${{ runner.os }}-${{ runner.arch }}-cargo-
 
-      # Yarn Berry's global cache holds the built `comline-simulator`
-      # archive: a hit skips the Rust build entirely.
+      # Yarn Berry's global cache holds the packed `comline-web-kit` and the
+      # built `comline-simulator` archives: a hit skips the Rust build entirely.
       - name: Cache yarn
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -70,6 +71,7 @@ jobs:
       - name: Install dependencies
         env:
           COMLINE_SIMULATOR_SCRIPT: '0' # the tutorial only needs the lean sim
+          COMLINE_KIT_EDITOR: '0' # and not the kit's editor WASM
         run: yarn install
 
       - name: build
