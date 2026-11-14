@@ -1188,9 +1188,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"comline-web-kit@git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132":
+"comline-web-kit@git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=f6077cc1a176f1cedd70225e804774e0ca4d00bc":
   version: 0.1.0
-  resolution: "comline-web-kit@https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132"
+  resolution: "comline-web-kit@https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=f6077cc1a176f1cedd70225e804774e0ca4d00bc"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.18.0"
     "@codemirror/commands": "npm:^6.7.0"
@@ -2508,7 +2508,7 @@ __metadata:
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/kit": "npm:^2.70.3"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.4"
-    comline-web-kit: "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132"
+    comline-web-kit: "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=f6077cc1a176f1cedd70225e804774e0ca4d00bc"
     eslint: "npm:^10.9.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-svelte: "npm:^3.23.0"
