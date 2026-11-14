@@ -26,8 +26,9 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     # The wasm CI image: Rust stable 1.99.1 with the wasm32 targets,
-    # wasm-bindgen 0.2.127 and binaryen (wasm-opt), which is what
-    # `comline-simulator`'s `prepack` needs to build its WASM.
+    # wasm-bindgen 0.2.127, wasm-pack and binaryen (wasm-opt), which is what
+    # `comline-simulator`'s and `comline-web-kit`'s `prepack`s need to build
+    # their WASM.
     container: ghcr.io/comlineproject/ci-wasm@sha256:74efbad4c8b06d554d28e8a1e486f12ae5b6b4bd15a15db21a0925e020caa40a
     steps:
       - name: Checkout
@@ -45,10 +46,11 @@ jobs:
       - name: Yarn
         run: corepack enable
 
-      # `comline-web-kit` (the playground's simulate view) is a git dependency,
-      # and so is its engine, `comline-simulator`, which compiles to WASM in
-      # its `prepack` (Rust to wasm-bindgen). The image has cargo, wasm-bindgen
-      # and wasm-opt; this caches the registry and git checkouts across runs.
+      # `comline-web-kit` (the playground's editor and simulate view) is a git
+      # dependency, and so is the sim's engine, `comline-simulator`. Both
+      # compile to WASM in their `prepack`: the kit builds the editor (the
+      # compiler and language server) with wasm-pack, the simulator with
+      # wasm-bindgen. This caches the registry and git checkouts across runs.
       - name: Cache cargo
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -60,18 +62,19 @@ jobs:
 
       # Yarn Berry's global cache holds the packed `comline-web-kit` and the
       # built `comline-simulator` archives: a hit skips the Rust build entirely.
+      # (`yarn-editor-`: caches from before the tutorial used the editor hold a
+      # kit packed without it, so they're never restored.)
       - name: Cache yarn
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.yarn/berry/cache
-          key: ${{ runner.os }}-${{ runner.arch }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-${{ runner.arch }}-yarn-
+          key: ${{ runner.os }}-${{ runner.arch }}-yarn-editor-${{ hashFiles('yarn.lock') }}
+          restore-keys: ${{ runner.os }}-${{ runner.arch }}-yarn-editor-
 
       # Yarn's `npmMinimalAgeGate` (its default, one day) stays on.
       - name: Install dependencies
         env:
           COMLINE_SIMULATOR_SCRIPT: '0' # the tutorial only needs the lean sim
-          COMLINE_KIT_EDITOR: '0' # and not the kit's editor WASM
         run: yarn install
 
       - name: build

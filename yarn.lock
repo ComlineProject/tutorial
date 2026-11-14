@@ -5,7 +5,7 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
-"@codemirror/autocomplete@npm:^6.18.0":
+"@codemirror/autocomplete@npm:^6.0.0, @codemirror/autocomplete@npm:^6.18.0":
   version: 6.20.4
   resolution: "@codemirror/autocomplete@npm:6.20.4"
   dependencies:
@@ -29,7 +29,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codemirror/language@npm:^6.0.0, @codemirror/language@npm:^6.10.0":
+"@codemirror/lang-javascript@npm:^6.2.5":
+  version: 6.2.5
+  resolution: "@codemirror/lang-javascript@npm:6.2.5"
+  dependencies:
+    "@codemirror/autocomplete": "npm:^6.0.0"
+    "@codemirror/language": "npm:^6.6.0"
+    "@codemirror/lint": "npm:^6.0.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@codemirror/view": "npm:^6.17.0"
+    "@lezer/common": "npm:^1.0.0"
+    "@lezer/javascript": "npm:^1.0.0"
+  checksum: 10c0/a9b10c58ad9dbcc54e17a641a114fc7718e362281dc9533828ed2a3a09270eb5677febb4ddad6d0cc2c439496f0ba0b7aa893d08de0b1ddc44df5c9ab0d7d299
+  languageName: node
+  linkType: hard
+
+"@codemirror/lang-rust@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "@codemirror/lang-rust@npm:6.0.2"
+  dependencies:
+    "@codemirror/language": "npm:^6.0.0"
+    "@lezer/rust": "npm:^1.0.0"
+  checksum: 10c0/f0f3345c279a84572d29ee9284ac6b96abcb8521db7c2247b561dc59823adeabd529280e5313e304e11bce6f3fb57386e7859e183fb0404bd8d8a81751587695
+  languageName: node
+  linkType: hard
+
+"@codemirror/language@npm:^6.0.0, @codemirror/language@npm:^6.10.0, @codemirror/language@npm:^6.6.0":
   version: 6.13.1
   resolution: "@codemirror/language@npm:6.13.1"
   dependencies:
@@ -44,7 +69,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codemirror/lint@npm:^6.8.0":
+"@codemirror/lint@npm:^6.0.0, @codemirror/lint@npm:^6.8.0":
   version: 6.9.8
   resolution: "@codemirror/lint@npm:6.9.8"
   dependencies:
@@ -442,14 +467,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/common@npm:^1.0.0, @lezer/common@npm:^1.1.0, @lezer/common@npm:^1.3.0, @lezer/common@npm:^1.5.0":
+"@lezer/common@npm:^1.0.0, @lezer/common@npm:^1.1.0, @lezer/common@npm:^1.2.0, @lezer/common@npm:^1.3.0, @lezer/common@npm:^1.5.0":
   version: 1.5.5
   resolution: "@lezer/common@npm:1.5.5"
   checksum: 10c0/d989bd7453d1fd90f2c0baf33fcf6e5f2082fcf3f1faf8b271ae51bef1ad388e2e53f5d91c16e841b70fe4d2ed7ed08adb3fb23cb03fee6455dad3c72f6ff998
   languageName: node
   linkType: hard
 
-"@lezer/highlight@npm:^1.0.0, @lezer/highlight@npm:^1.2.3":
+"@lezer/highlight@npm:^1.0.0, @lezer/highlight@npm:^1.1.3, @lezer/highlight@npm:^1.2.3":
   version: 1.2.5
   resolution: "@lezer/highlight@npm:1.2.5"
   dependencies:
@@ -458,12 +483,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/lr@npm:^1.0.0":
+"@lezer/javascript@npm:^1.0.0":
+  version: 1.5.6
+  resolution: "@lezer/javascript@npm:1.5.6"
+  dependencies:
+    "@lezer/common": "npm:^1.2.0"
+    "@lezer/highlight": "npm:^1.1.3"
+    "@lezer/lr": "npm:^1.3.0"
+  checksum: 10c0/9cb004eb81cab833bdc25504e5632edf154f62f67c22b1fdc0023c1fc4deccab2be48f016a77e70198b2b49d13b16bc6a65d9826f54f81acf8ffd3edcf1f44cc
+  languageName: node
+  linkType: hard
+
+"@lezer/lr@npm:^1.0.0, @lezer/lr@npm:^1.3.0":
   version: 1.4.12
   resolution: "@lezer/lr@npm:1.4.12"
   dependencies:
     "@lezer/common": "npm:^1.0.0"
   checksum: 10c0/3912ecd5f9ed916a13e929ab5f7d2cfc26d6d389b0b0d0673cbfb4d957042069f7c7182c991ebcb2019c4bba289102f81662200277b6c365911e62969fa67d74
+  languageName: node
+  linkType: hard
+
+"@lezer/rust@npm:^1.0.0":
+  version: 1.0.3
+  resolution: "@lezer/rust@npm:1.0.3"
+  dependencies:
+    "@lezer/common": "npm:^1.2.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    "@lezer/lr": "npm:^1.0.0"
+  checksum: 10c0/f4e5f1bdc8e90556059a0d8a119692b6cb3cfc39848f272b9cc01f38a3dcc00311a62a1b3099222fef68c24a6cc05d50f8f040d01f8c553f4e8c5802a36ad867
   languageName: node
   linkType: hard
 
@@ -1141,9 +1188,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"comline-web-kit@git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=fe53d2edcd25cf8bcd77d9f52a3c2ec09d453136":
+"comline-web-kit@git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132":
   version: 0.1.0
-  resolution: "comline-web-kit@https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=fe53d2edcd25cf8bcd77d9f52a3c2ec09d453136"
+  resolution: "comline-web-kit@https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.18.0"
     "@codemirror/commands": "npm:^6.7.0"
@@ -1153,7 +1200,7 @@ __metadata:
     "@codemirror/view": "npm:^6.34.0"
     "@lezer/highlight": "npm:^1.2.3"
     comline-simulator: "git+https://github.com/ComlineProject/simulator.git#564851a8fa00709cd94db8ce8ab1c4325a691fc4"
-  checksum: 10c0/56780f4fe2eea8433c39374ec8ab2890344d92edc806dc6c62af9a34488f1ebe247438a4b1f41aadc06f0a99b74532e281b5ad2ec505352241ff856728a09b66
+  checksum: 10c0/26796fcd738bb84f670344f28f57c07d94dc9d8143d2937fba94ac36dfb07670ff6e2cb1ca3bb7674137e6392bcaa8da3c8af436f72547bb143811e6bf58a785
   languageName: node
   linkType: hard
 
@@ -2451,12 +2498,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tutorial@workspace:."
   dependencies:
+    "@codemirror/lang-javascript": "npm:^6.2.5"
+    "@codemirror/lang-rust": "npm:^6.0.2"
+    "@codemirror/language": "npm:^6.10.0"
+    "@codemirror/state": "npm:^6.4.0"
+    "@codemirror/view": "npm:^6.34.0"
     "@eslint/js": "npm:^10.0.1"
     "@playwright/test": "npm:^1.62.1"
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/kit": "npm:^2.70.3"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.4"
-    comline-web-kit: "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=fe53d2edcd25cf8bcd77d9f52a3c2ec09d453136"
+    comline-web-kit: "git+https://github.com/ComlineProject/playground.git#workspace=comline-web-kit&commit=2e058f14451ec96da0d72ab462abd89697773132"
     eslint: "npm:^10.9.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-svelte: "npm:^3.23.0"

@@ -5,7 +5,9 @@
 </script>
 
 
-<a class="{disabled ? "btn-disabled" : "btn"}" href={href_url ?? '#'}>
+<!-- A disabled button has no href, so it isn't a link at all. -->
+<a class="btn" class:disabled href={disabled ? undefined : href_url ?? '#'}
+    aria-disabled={disabled}>
     {text}
 </a>
 
@@ -16,15 +18,20 @@
         padding: 10px 20px;
         cursor: pointer;
         text-decoration: none;
-        background-color: #322922;
-        color: #DBB594;
-        border-color: #4D3C2F;
+        background-color: var(--btn-bg);
+        color: var(--btn-fg);
+        border-color: var(--btn-border);
         border-style: ridge;
     }
     .btn:hover {
-        background-color: #3E3128;
+        background-color: var(--btn-hover);
     }
     .btn:active {
-        background-color: #28211D;
+        background-color: var(--btn-active);
+    }
+    .btn.disabled {
+        cursor: default;
+        opacity: 0.4;
+        background-color: var(--btn-bg);
     }
 </style>

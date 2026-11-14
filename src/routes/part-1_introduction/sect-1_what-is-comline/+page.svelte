@@ -6,7 +6,7 @@
 
 <TutorialPage previous_url={pageUrl("p1")} next_url={pageUrl("p1-s2")}>
 	<h2>What is Comline?</h2>
-    <p>Comline is or can be a couple things:</p>
+	<p>Comline is or can be a couple things:</p>
 	<ul class="points">
 		<li>a compiler</li>
 		<li>a schema language</li>

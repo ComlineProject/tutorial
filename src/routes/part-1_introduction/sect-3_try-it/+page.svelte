@@ -4,7 +4,7 @@
 	import Simulation from '$lib/sim/Simulation.svelte';
 </script>
 
-<TutorialPage previous_url={pageUrl('p1-s2')} next_url={pageUrl('p1-s4')}>
+<TutorialPage previous_url={pageUrl('p1-s2')} next_url={pageUrl('p2')}>
 	<h2>Try it</h2>
 	<p>
 		Below is a Chat client and server, both generated from the same schema and wired together. Send

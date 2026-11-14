@@ -8,6 +8,11 @@ export default defineConfig({
 	optimizeDeps: {
 		exclude: ['comline-web-kit']
 	},
+	// The kit's compiler runs in a module worker (`type: "module"`), which the
+	// build has to emit as an ES module too.
+	worker: {
+		format: 'es'
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
