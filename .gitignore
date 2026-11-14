@@ -21,3 +21,6 @@ vite.config.ts.timestamp-*
 
 # JetBrains IDEA settings
 .idea/
+
+# Playwright
+/test-results
